@@ -33,6 +33,9 @@
                     <button>
                         <a href="{{route('comics.show', $comic)}}">vedi</a>
                     </button>
+                    <button>
+                        <a href="{{route('comics.edit', $comic)}}">modifica</a>
+                    </button>
                 </td>
             </tr>
             @endforeach
