@@ -44,7 +44,7 @@ class ComicController extends Controller
             'sale_date' => 'required',
             'type' => [
                 'required',
-                Rule::in(['graphic novel','comic book'])
+                Rule::in(['graphic','book'])
             ], //graphic novel o comic book
             
         ]);
@@ -87,7 +87,7 @@ class ComicController extends Controller
             'sale_date' => 'required',
             'type' => [
                 'required',
-                Rule::in(['graphic novel','comic book'])
+                Rule::in(['graphic','book'])
             ], //graphic novel o comic book
             
         ]);

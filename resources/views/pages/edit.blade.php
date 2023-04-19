@@ -17,7 +17,8 @@
             {{-- <div class="alert alert-danger">{{$message}}</div> --}}
             <div class="invalid-feedback">
                 {{$message}}
-            </div>  
+            </div>
+            @enderror 
         </div>
 
      
@@ -33,18 +34,18 @@
 
         <h5>Prezzo</h5>
         <div class="input-group mb-3">
-            <input class="form-select @error('price')is-invalid @enderror" type="text" value="{{ old(price,$comic->price) }}" name="price" id="price" placeholder="Inserisci il prezzo in €" >
+            <input class="form-select @error('price')is-invalid @enderror" type="text" value="{{ old('price',$comic->price) }}" name="price" id="price" placeholder="Inserisci il prezzo in €" >
         </div>
         
 
         <h5>Nome della serie</h5>
         <div class="input-group mb-3">
-            <input class="form-select @error('series')is-invalid @enderror" type="text" value="{{ old(series,$comic->series)}}" name="series" id="series" placeholder="Inserisci il nome della serie" >
+            <input class="form-select @error('series')is-invalid @enderror" type="text" value="{{ old('series',$comic->series)}}" name="series" id="series" placeholder="Inserisci il nome della serie" >
         </div>
 
         <h5>Data della vendita</h5>
         <div class="input-group mb-3">
-            <input class="form-select @error('sale_date')is-invalid @enderror" type="date" value='{{old(sale_date,$comic->sale_date)}}' name="sale_date" id="sale_date">
+            <input class="form-select @error('sale_date')is-invalid @enderror" type="date" value='{{old('sale_date',$comic->sale_date)}}' name="sale_date" id="sale_date">
             
         </div>
 
@@ -63,15 +64,6 @@
         
     </form>
 
-    {{-- @if ($error->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
-    </div>    
-    @endif --}}
   
 </div>
 
