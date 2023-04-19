@@ -47,6 +47,9 @@
         </tbody>
         
     </table>
+    <button>
+        <a href="{{route('comics.create', $comic)}}">Aggiungi un nuovo comic</a>
+    </button>
 
 </div>
 

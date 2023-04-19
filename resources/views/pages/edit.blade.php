@@ -59,8 +59,12 @@
             </select>
 
         </div>
-
         <button type="submit" class="btn btn-primary">Salva</button>
+        <form action="{{route('comics.destroy', $comic)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Elimina">
+        </form>
         
     </form>
 
